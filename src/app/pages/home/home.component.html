@@ -1,0 +1,69 @@
+<div class="container">
+  <div class="box-dark-theme">
+    <div class="action">
+      <span class="mode">Dark Theme</span>
+      <app-slide-toggle></app-slide-toggle>
+    </div>
+  </div>
+
+  <div class="box-calculator">
+    <div class="calculator">
+      <div class="display">
+        <div class="box-result">
+          <div class="box-operation">
+           <span class="numbers-operations">{{operation}}</span>
+          </div>
+          <div class="result">
+            <span class="numbers-result">={{showResult}}</span>
+          </div>
+        </div>
+      </div>
+      <div class="box-keys">
+        <div class="first-line">
+          <button class="special-keys key">e</button>
+          <button class="special-keys key">µ</button>
+          <button class="special-keys key">sin</button>
+          <button class="special-keys key">deg</button>
+        </div>
+
+        <div class="second-line">
+          <button class="turn-on-and-off key" (click)="clear()">Ac</button>
+          <button class="special-keys key">
+            <img src="assets/clear.svg" alt="">
+          </button>
+          <button class="special-keys key keys-operators" (click)="getValues('/')">/</button>
+          <button class="special-keys key keys-operators" (click)="getValues('*')">*</button>
+        </div>
+
+        <div class="third-line">
+          <button class="special-keys numbers key" (click)="getValues('7')">7</button>
+          <button class="special-keys numbers key" (click)="getValues('8')">8</button>
+          <button class="special-keys numbers key" (click)="getValues('9')">9</button>
+          <button class="special-keys numbers key keys-operators" (click)="getValues('-')">-</button>
+        </div>
+
+        <div class="fourth-line">
+          <div class="box-numbers">
+            <div class="line-one">
+              <button class="special-keys numbers key" (click)="getValues('4')">4</button>
+              <button class="special-keys numbers key" (click)="getValues('5')">5</button>
+              <button class="special-keys numbers key" (click)="getValues('6')">6</button>
+            </div>
+            <div class="line-two">
+              <button class="special-keys numbers key" (click)="getValues('1')">1</button>
+              <button class="special-keys numbers key" (click)="getValues('2')">2</button>
+              <button class="special-keys numbers key" (click)="getValues('3')">3</button>
+            </div>
+          </div>
+          <button class="special-keys numbers key add-button keys-operators" (click)="getValues('+')">+</button>
+        </div>
+
+        <div class="fifth-line">
+            <button class="special-keys numbers zero key" (click)="getValues('0')">0</button>
+            <button class="special-keys numbers key dot" (click)="getValues('.')">.</button>
+            <button class="special-keys numbers key equal" (click)="result()">=</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
